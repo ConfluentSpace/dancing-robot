@@ -9,10 +9,10 @@
 
 //  zowi.setTrims(3,3,0,5);
 
-#define TRIM_YR -7
-#define TRIM_YL -7
-#define TRIM_RR -8
-#define TRIM_RL 1
+#define TRIM_YR 1
+#define TRIM_YL 1
+#define TRIM_RR 2
+#define TRIM_RL 6
 		
 
 /* orig 
@@ -77,8 +77,13 @@ double pause=0;
 void loop()
 {
 	dance();
+        //testing();
 	for(int i=0;i<4;i++) servo[i].SetPosition(90);
  	while(1) ;
+}
+
+void testing(){
+  noGravity(t*2);
 }
 
 void dance(){
@@ -338,9 +343,9 @@ void drunk (int tempo){
 
 void noGravity(int tempo){
   
-  int move1[4] = {100,120,90,90};
-  int move2[4] = {120,120,90,90};
-  int move3[4] = {100,120,90,90};
+  int move1[4] = {100,140,90,90};
+  int move2[4] = {130,140,90,90};
+  int move3[4] = {100,140,90,90};
   int move4[4] = {90,90,90,90};
   
   
