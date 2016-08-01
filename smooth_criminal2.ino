@@ -83,7 +83,7 @@ void loop()
 }
 
 void testing(){
-  //goingUp(t*1);
+  goingUp(t*2);
   upAndDown(t*1);
 }
 
@@ -225,9 +225,9 @@ void goingUp(int tempo){
       servo[0].SetPosition(30);
       servo[1].SetPosition(150);
       delay(tempo);
-      servo[0].SetPosition(20);
-      servo[1].SetPosition(165);
-      delay(tempo);
+      //servo[0].SetPosition(25);
+      //servo[1].SetPosition(155);
+      //delay(tempo);
       
       while(millis()<pause+8*t);
 
@@ -258,8 +258,8 @@ void upAndDown(int tempo){
       servo[0].SetPosition(30);
       servo[1].SetPosition(150);
       delay(tempo);
-      servo[0].SetPosition(20);
-      servo[1].SetPosition(165);
+      servo[0].SetPosition(25);
+      servo[1].SetPosition(155);
       
       // Go down
       delay(tempo/2);
@@ -368,7 +368,7 @@ void segunda_parte(){
 void lateral_fuerte(boolean side, int tempo){
   
   for(int i=0;i<4;i++) servo[i].SetPosition(90);
-  if (side) servo[0].SetPosition(40);
+  if (side) servo[0].SetPosition(60);
   else servo[1].SetPosition(140);
   delay(tempo/2);
   servo[0].SetPosition(90);
@@ -441,22 +441,22 @@ void kickLeft(int tempo){
 void kickRight(int tempo){
 for(int i=0;i<4;i++) servo[i].SetPosition(90);
   delay(tempo);
-  servo[0].SetPosition(115); //pie derecho
+  servo[0].SetPosition(120); //pie derecho
   servo[1].SetPosition(130); //pie izquiero
   delay(tempo);
-  servo[0].SetPosition(115); //pie derecho
+  servo[0].SetPosition(120); //pie derecho
   servo[1].SetPosition(100); //pie izquiero
   delay(tempo/4);
-  servo[0].SetPosition(115); //pie derecho
+  servo[0].SetPosition(120); //pie derecho
   servo[1].SetPosition(150); //pie izquiero
   delay(tempo/4);
-  servo[0].SetPosition(115); //pie derecho
+  servo[0].SetPosition(120); //pie derecho
   servo[1].SetPosition(80); //pie izquiero
   delay(tempo/4);
-  servo[0].SetPosition(115); //pie derecho
+  servo[0].SetPosition(120); //pie derecho
   servo[1].SetPosition(150); //pie izquiero
   delay(tempo/4);
-  servo[0].SetPosition(115); //pie derecho
+  servo[0].SetPosition(120); //pie derecho
   servo[1].SetPosition(100); //pie izquiero
   delay(tempo);
 }
