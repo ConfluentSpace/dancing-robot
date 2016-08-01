@@ -76,14 +76,15 @@ double pause=0;
 
 void loop()
 {
-	//dance();
-        testing();
+	dance();
+        //testing();
 	for(int i=0;i<4;i++) servo[i].SetPosition(90);
  	while(1) ;
 }
 
 void testing(){
-  kickRight(t);
+  //goingUp(t*1);
+  upAndDown(t*1);
 }
 
 void dance(){
@@ -124,7 +125,8 @@ void dance(){
   walk(2,t*2);
   backyard(2,t*2);
   goingUp(t*2);
-  goingUp(t*1);
+  //goingUp(t*1);
+  upAndDown(t*1);
   noGravity(t*2);
   crusaito(1,t*2);
   crusaito(1,t*8);
@@ -220,14 +222,66 @@ void goingUp(int tempo){
       servo[0].SetPosition(40);
       servo[1].SetPosition(140);
       delay(tempo);
-      //servo[0].SetPosition(30);
-      //servo[1].SetPosition(150);
+      servo[0].SetPosition(30);
+      servo[1].SetPosition(150);
       delay(tempo);
-      //servo[0].SetPosition(20);
-      //servo[1].SetPosition(160);
+      servo[0].SetPosition(20);
+      servo[1].SetPosition(165);
       delay(tempo);
       
       while(millis()<pause+8*t);
+
+}
+
+
+void upAndDown(int tempo){
+  
+      pause=millis();
+      for(int i=0;i<4;i++) servo[i].SetPosition(90);
+      // Go up
+      delay(tempo);
+      servo[0].SetPosition(80);
+      servo[1].SetPosition(100);
+      delay(tempo);
+      servo[0].SetPosition(70);
+      servo[1].SetPosition(110);
+      delay(tempo);
+      servo[0].SetPosition(60);
+      servo[1].SetPosition(120);
+      delay(tempo);
+      servo[0].SetPosition(50);
+      servo[1].SetPosition(130);
+      delay(tempo);
+      servo[0].SetPosition(40);
+      servo[1].SetPosition(140);
+      delay(tempo);
+      servo[0].SetPosition(30);
+      servo[1].SetPosition(150);
+      delay(tempo);
+      servo[0].SetPosition(20);
+      servo[1].SetPosition(165);
+      
+      // Go down
+      delay(tempo/2);
+      servo[0].SetPosition(30);
+      servo[1].SetPosition(150);
+      delay(tempo/2);
+      servo[0].SetPosition(40);
+      servo[1].SetPosition(140);
+      delay(tempo/2);
+      servo[0].SetPosition(50);
+      servo[1].SetPosition(130);
+      delay(tempo/2);
+      servo[0].SetPosition(60);
+      servo[1].SetPosition(120);
+      delay(tempo/2);
+      servo[0].SetPosition(70);
+      servo[1].SetPosition(110);
+      delay(tempo/2);
+      servo[0].SetPosition(80);
+      servo[1].SetPosition(100);
+      delay(tempo/2);
+      for(int i=0;i<4;i++) servo[i].SetPosition(90);
 
 }
 
