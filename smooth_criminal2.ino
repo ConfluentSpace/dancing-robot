@@ -76,14 +76,14 @@ double pause=0;
 
 void loop()
 {
-	dance();
-        //testing();
+	//dance();
+        testing();
 	for(int i=0;i<4;i++) servo[i].SetPosition(90);
  	while(1) ;
 }
 
 void testing(){
-  noGravity(t*2);
+  kickLeft(t);
 }
 
 void dance(){
@@ -365,22 +365,22 @@ void kickLeft(int tempo){
   for(int i=0;i<4;i++) servo[i].SetPosition(90);
   delay(tempo);
   servo[0].SetPosition(50); //pie derecho
-  servo[1].SetPosition(70); //pie izquiero
+  servo[1].SetPosition(65); //pie izquiero
   delay(tempo);
   servo[0].SetPosition(80); //pie derecho
-  servo[1].SetPosition(70); //pie izquiero
+  servo[1].SetPosition(65); //pie izquiero
   delay(tempo/4);
   servo[0].SetPosition(30); //pie derecho
-  servo[1].SetPosition(70); //pie izquiero
+  servo[1].SetPosition(65); //pie izquiero
   delay(tempo/4);
   servo[0].SetPosition(80); //pie derecho
-  servo[1].SetPosition(70); //pie izquiero
+  servo[1].SetPosition(65); //pie izquiero
   delay(tempo/4);
   servo[0].SetPosition(30); //pie derecho
-  servo[1].SetPosition(70); //pie izquiero
+  servo[1].SetPosition(65); //pie izquiero
   delay(tempo/4);
   servo[0].SetPosition(80); //pie derecho
-  servo[1].SetPosition(70); //pie izquiero
+  servo[1].SetPosition(65); //pie izquiero
   delay(tempo);
 }
 
